@@ -51,7 +51,7 @@ body, html {
 .text-row p, .text-row a {
     margin: 0;
     font-size: 30px; /* Adjust as needed */
-    color: rgb(231,68,71,255); /* Change this to the desired color */
+    color: rgb(231,68,71); /* Change this to the desired color */
     font-weight: bold; /* Make the text bold */
     text-decoration: none; /* Remove underline from link */
 	font-family: Arial, sans-serif;
