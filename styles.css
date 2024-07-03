@@ -28,7 +28,7 @@ body, html {
 }
 
 .logo {
-    width: 450px; /* Adjust as needed */
+    width: 300px; /* Adjust as needed */
     height: auto;
 }
 
@@ -43,14 +43,14 @@ body, html {
 }
 
 .text-row .icon {
-    width: 45px; /* Adjust as needed */
+    width: 35px; /* Adjust as needed */
     height: auto;
     margin-right: 10px; /* Adjust as needed */
 }
 
 .text-row p, .text-row a {
     margin: 0;
-    font-size: 40px; /* Adjust as needed */
+    font-size: 30px; /* Adjust as needed */
     color: rgb(217, 37, 63); /* Change this to the desired color */
     font-weight: bold; /* Make the text bold */
     text-decoration: none; /* Remove underline from link */
