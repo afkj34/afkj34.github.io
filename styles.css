@@ -60,4 +60,34 @@ body, html {
                  -1px  1px 0 #000,
                   1px  1px 0 #000; /* Adds black outline */
 }
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    float: left;
+}
+
+.nav-list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.nav-list li a:hover {
+    background-color: #111;
+}
+
 }
