@@ -51,7 +51,7 @@ body, html {
 .text-row p, .text-row a {
     margin: 0;
     font-size: 30px; /* Adjust as needed */
-    color: rgb(245, 59, 90); /* Change this to the desired color */
+    color: #ea4343; /* Change this to the desired color */
     font-weight: bold; /* Make the text bold */
     text-decoration: none; /* Remove underline from link */
 	font-family: Arial, sans-serif;
@@ -62,7 +62,7 @@ body, html {
 }
 
 .navbar {
-    background-color: #333;
+    background-color: #ea4343;
     overflow: hidden;
 }
 
@@ -87,7 +87,7 @@ body, html {
 }
 
 .nav-list li a:hover {
-    background-color: #111;
+    background-color: #b70e0e;
 }
 
 }
