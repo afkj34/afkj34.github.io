@@ -75,6 +75,7 @@ body, html {
 .navbar {
     background-color: #ea4343;
     overflow: hidden;
+    padding-right: 20px; /* Add some padding to the right */
 }
 
 .nav-list {
@@ -82,11 +83,11 @@ body, html {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Change from center to flex-end */
 }
 
 .nav-list li {
-    float: left;
+    margin-left: 20px; /* Add some space between the list items */
 }
 
 .nav-list li a {
@@ -99,6 +100,4 @@ body, html {
 
 .nav-list li a:hover {
     background-color: #b70e0e;
-}
-
 }
