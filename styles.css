@@ -83,7 +83,7 @@ body, html {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Change from center to flex-end */
+    justify-content: center; /* Change from center to flex-end */
 }
 
 .nav-list li {
