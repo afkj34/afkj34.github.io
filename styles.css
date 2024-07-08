@@ -75,7 +75,7 @@ body, html {
 .navbar {
     background-color: #ea4343;
     overflow: hidden;
-    padding-right: 21px; /* Add some padding to the right */
+    padding-right: 20px; /* Add some padding to the right */
 }
 
 .nav-list {
