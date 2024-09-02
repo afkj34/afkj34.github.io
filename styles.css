@@ -100,5 +100,41 @@ body, html {
 .nav-list li a:hover {
     background-color: #b70e0e;
 }
-
+/* Improve typography and text styling */
+.subpage-text {
+    color: #fff; /* White text for contrast against the background */
+    text-align: left; /* Align text to the left for a more traditional layout */
+    font-size: 20px; /* Slightly smaller for readability */
+    font-weight: 400; /* Regular weight for body text */
+    line-height: 1.6; /* Better line spacing for readability */
+    margin-left: auto; /* Center content within the page */
+    margin-right: auto;
+    padding: 20px; /* Add padding for breathing space around the text */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    max-width: 800px; /* Limit the width to keep text lines shorter and easier to read */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for depth */
 }
+
+.subpage-text h1 {
+    font-size: 36px; /* Larger font size for the heading */
+    margin-bottom: 20px; /* Space between heading and text */
+    color: #ea4343; /* Accent color to match the theme */
+    text-align: center; /* Center the heading */
+    text-transform: uppercase; /* Make heading uppercase for emphasis */
+    font-weight: bold; /* Make heading bold */
+}
+
+.subpage-text p {
+    margin-bottom: 15px; /* Space between paragraphs */
+    text-indent: 20px; /* Indent the first line of each paragraph */
+}
+
+.intro-text {
+    font-size: 22px; /* Slightly larger font for the introductory paragraph */
+    font-weight: 600; /* Make the introductory text a bit bolder */
+    margin-bottom: 25px; /* Add extra spacing after the intro */
+    text-align: center; /* Center the introductory paragraph for emphasis */
+}
+
+
