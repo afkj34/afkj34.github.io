@@ -52,7 +52,7 @@ body, html {
 .text-row p, .text-row a {
     margin: 0;
     font-size: 30px; /* Adjust as needed */
-    color: #ea4343; /* Change this to the desired color */
+    color: #e51937; /* Change this to the desired color */
     font-weight: bold; /* Make the text bold */
     text-decoration: none; /* Remove underline from link */
     text-shadow: -1px -1px 0 #000,  
