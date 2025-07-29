@@ -111,3 +111,120 @@ body, html {
         opacity: 1;
     }
 }
+
+/* Gallery */
+.gallery {
+    display: none;
+    width: 100%;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 5;
+}
+
+.gallery.show {
+    display: block;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+.gallery-item p {
+    color: #fff;
+    font-size: 16px;
+    padding: 8px;
+    margin: 0;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 70%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.lightbox p {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Gallery category buttons */
+.gallery-categories {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-categories button {
+    background: #e51937;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.gallery-categories button:hover {
+    background: #b70e0e;
+}
+
+/* Adjust gallery-item (no labels) */
+.gallery-item {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Responsive lightbox adjustments */
+.lightbox img {
+    max-width: 95%;
+    max-height: 75%;
+}
