@@ -1,9 +1,9 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
     font-family: Arial, sans-serif;
+    overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
 .background {
@@ -12,12 +12,13 @@ body, html {
     background-position: center;
     background-color: #000;
     width: 100%;
-    height: 100%;
+    min-height: 100vh; /* full height of viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow-x: hidden;
 }
 
 .logo-container {
@@ -129,6 +130,11 @@ body, html {
 .gallery-categories {
     text-align: center;
     margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    z-index: 10;
 }
 
 .gallery-categories button {
@@ -166,7 +172,6 @@ body, html {
     margin: 0 auto;
 }
 
-
 .gallery-item {
     background: #222;
     border-radius: 10px;
@@ -176,7 +181,6 @@ body, html {
     width: 214px;
     height: 214px;
 }
-
 
 .gallery-item img {
     width: 100%;
