@@ -4,44 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wayne's World Party Time</title>
-    <link rel="stylesheet" href="styles.css?v=1.06">
+    <link rel="stylesheet" href="styles.css?v=1.09">
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
     <style>
         .under-construction {
             color: white;
-            font-weight: bold;
-            font-size: 28px;
+            font-weight: normal;
+            font-size: 16px;
             text-align: center;
-            padding: 20px 0;
+            padding: 8px 0;
+            letter-spacing: 0.5px;
         }
         .navbar {
-            background-color: #e51937;
-            font-size: 13px;
+            background-color: rgba(229, 25, 55, 0.85);
+            font-size: 12px;
+        }
+        @media (max-width: 600px) {
+            .under-construction {
+                font-size: 14px;
+                padding: 6px 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="under-construction">Site Under Construction 🔨</div>
+            <div class="under-construction">Site Under Construction 🔨 Full site launching soon!</div>
         </nav>
     </header>
     <div class="background">
-        <div class="logo-container">
+        <div class="logo-container fade-in">
             <a href="index.html">
                 <img src="assets/logo.png" alt="Logo" class="logo">
             </a>
         </div>
-        <div class="text-container">
+        <div class="text-container fade-in">
             <div class="text-row">
-                <img src="assets/ig_icon.png" alt="Icon 1" class="icon">
-                 <a href="https://www.instagram.com/waynesworldpartytimeinc/" target="_blank" class="text-link">Our Instagram</a>
+                <img src="assets/ig_icon.png" alt="Instagram" class="icon">
+                <a href="https://www.instagram.com/waynesworldpartytimeinc/" target="_blank" class="text-link">Our Instagram</a>
             </div>
             <div class="text-row">
-                <img src="assets/phone_icon.png" alt="Icon 2" class="icon">
-                <p>+1 (800) 941-4033</p>
+                <img src="assets/phone_icon.png" alt="Phone" class="icon">
+                <a href="tel:+18009414033" class="text-link">+1 (800) 941-4033</a>
+            </div>
+            <div class="cta-button-container">
+                <a href="mailto:twaynewizzo@gmail.com" class="cta-button">Contact Us</a>
             </div>
         </div>
     </div>
+    <footer class="footer">
+        © 2025 Wayne's World Party Time, Inc.
+    </footer>
 </body>
 </html>
