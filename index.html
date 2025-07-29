@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wayne's World Party Time</title>
-    <link rel="stylesheet" href="styles.css?v=1.11">
+	<link rel="stylesheet" href="styles.css?v=1.14">
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
     <style>
         .under-construction {
@@ -49,76 +49,96 @@
                 <a href="tel:+18009414033" class="text-link">+1 (800) 941-4033</a>
             </div>
             <div class="cta-button-container">
-				<a href="mailto:twaynewizzo@gmail.com" class="cta-button">Contact Us</a>
-			</div>
-			<div class="cta-button-container">
-				<button type="button" class="cta-button" onclick="toggleGallery()">Photo Gallery</button>
-			</div>
+                <a href="mailto:twaynewizzo@gmail.com" class="cta-button">Contact Us</a>
+            </div>
+            <div class="cta-button-container">
+                <button type="button" class="cta-button" onclick="toggleGallery()">Photo Gallery</button>
+            </div>
         </div>
     </div>
-<!-- Photo Gallery Section -->
-<div id="gallery" class="gallery">
-    <div class="gallery-categories">
-        <button onclick="filterGallery('all')">All</button>
-        <button onclick="filterGallery('tents')">Tents</button>
-        <button onclick="filterGallery('tables')">Tables & Chairs</button>
-        <button onclick="filterGallery('inflatables')">Inflatables</button>
-        <button onclick="filterGallery('concessions')">Concessions</button>
+
+    <!-- Photo Gallery Section -->
+    <div id="gallery" class="gallery">
+        <div class="gallery-categories">
+            <button onclick="filterGallery('all')">All</button>
+            <button onclick="filterGallery('tents')">Tents</button>
+            <button onclick="filterGallery('tables')">Tables & Chairs</button>
+            <button onclick="filterGallery('inflatables')">Inflatables</button>
+            <button onclick="filterGallery('concessions')">Concessions</button>
+            <button class="close-gallery" onclick="closeGallery()">X</button>
+        </div>
+        <div class="gallery-grid">
+            <!-- Tent -->
+            <div class="gallery-item" data-category="tents" onclick="openLightbox('assets/15x30.jpg')">
+                <img src="assets/15x30_thumb.jpg" alt="Tents">
+            </div>
+			<div class="gallery-item" data-category="tents" onclick="openLightbox('assets/15x45.jpg')">
+                <img src="assets/15x45_thumb.jpg" alt="Tents">
+            </div>
+			<div class="gallery-item" data-category="tents" onclick="openLightbox('assets/20x20.jpg')">
+                <img src="assets/20x20_thumb.jpg" alt="Tents">
+            </div>
+			<div class="gallery-item" data-category="tents" onclick="openLightbox('assets/20x40.jpg')">
+                <img src="assets/20x40_thumb.jpg" alt="Tents">
+            </div>
+            <!-- Tables & Chairs -->
+            <div class="gallery-item" data-category="tables" onclick="openLightbox('assets/photo2.jpg')">
+                <img src="assets/photo2_thumb.jpg" alt="Tables & Chairs">
+            </div>
+            <!-- Inflatables -->
+            <div class="gallery-item" data-category="inflatables" onclick="openLightbox('assets/photo3.jpg')">
+                <img src="assets/photo3_thumb.jpg" alt="Inflatables">
+            </div>
+            <!-- Concessions -->
+            <div class="gallery-item" data-category="concessions" onclick="openLightbox('assets/photo4.jpg')">
+                <img src="assets/photo4_thumb.jpg" alt="Concessions">
+            </div>
+        </div>
     </div>
-    <div class="gallery-grid">
-        <!-- Example images, assign data-category attributes -->
-        <div class="gallery-item" data-category="tents" onclick="openLightbox('assets/photo1.jpg')">
-            <img src="assets/photo1_thumb.jpg" alt="Tents">
-        </div>
-        <div class="gallery-item" data-category="tables" onclick="openLightbox('assets/photo2.jpg')">
-            <img src="assets/photo2_thumb.jpg" alt="Tables & Chairs">
-        </div>
-        <div class="gallery-item" data-category="inflatables" onclick="openLightbox('assets/photo3.jpg')">
-            <img src="assets/photo3_thumb.jpg" alt="Inflatables">
-        </div>
-        <div class="gallery-item" data-category="concessions" onclick="openLightbox('assets/photo4.jpg')">
-            <img src="assets/photo4_thumb.jpg" alt="Concessions">
-        </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
     </div>
-</div>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="">
-</div>
-
-<script>
-    function toggleGallery() {
-        const gallery = document.getElementById('gallery');
-        gallery.classList.toggle('show');
-        if (gallery.classList.contains('show')) {
-            gallery.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-    function openLightbox(src) {
-        document.getElementById('lightbox-img').src = src;
-        document.getElementById('lightbox').classList.add('show');
-    }
-
-    function closeLightbox() {
-        document.getElementById('lightbox').classList.remove('show');
-    }
-
-    function filterGallery(category) {
-        const items = document.querySelectorAll('.gallery-item');
-        items.forEach(item => {
-            if (category === 'all' || item.dataset.category === category) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-</script>
 
     <footer class="footer">
         © 2025 Wayne's World Party Time, Inc.
     </footer>
+
+    <script>
+        function toggleGallery() {
+            const gallery = document.getElementById('gallery');
+            gallery.classList.toggle('show');
+            if (gallery.classList.contains('show')) {
+                gallery.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('show');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('show');
+        }
+
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function closeGallery() {
+            const gallery = document.getElementById('gallery');
+            gallery.classList.remove('show');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
