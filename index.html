@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wayne's World Party Time</title>
-    <link rel="stylesheet" href="styles.css?v=1.16">
+    <link rel="stylesheet" href="styles.css?v=1.18">
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
     <style>
         .under-construction {
@@ -60,7 +60,6 @@
     <!-- Photo Gallery Section -->
     <div id="gallery" class="gallery">
         <div class="gallery-categories">
-            <button onclick="filterGallery('all')">All</button>
             <button onclick="filterGallery('tents')">Tents</button>
             <button onclick="filterGallery('tables')">Tables & Chairs</button>
             <button onclick="filterGallery('inflatables')">Inflatables</button>
@@ -105,40 +104,54 @@
         © 2025 Wayne's World Party Time, Inc.
     </footer>
 
-    <script>
-        function toggleGallery() {
-            const gallery = document.getElementById('gallery');
-            gallery.classList.toggle('show');
-            if (gallery.classList.contains('show')) {
-                gallery.scrollIntoView({ behavior: 'smooth' });
+  <script>
+    function toggleGallery() {
+        const gallery = document.getElementById('gallery');
+        const isOpening = !gallery.classList.contains('show');
+
+        gallery.classList.toggle('show');
+
+        if (gallery.classList.contains('show')) {
+            // Default to tents when opening
+            filterGallery('tents');
+            gallery.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.add('show');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('show');
+    }
+
+    function filterGallery(category) {
+        const items = document.querySelectorAll('.gallery-item');
+        const buttons = document.querySelectorAll('.gallery-categories button');
+
+        // Show/hide images
+        items.forEach(item => {
+            item.style.display = (item.dataset.category === category) ? 'block' : 'none';
+        });
+
+        // Update active button highlight
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('onclick') === `filterGallery('${category}')`) {
+                btn.classList.add('active');
             }
-        }
+        });
+    }
 
-        function openLightbox(src) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox').classList.add('show');
-        }
+    function closeGallery() {
+        const gallery = document.getElementById('gallery');
+        gallery.classList.remove('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
 
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('show');
-        }
 
-        function filterGallery(category) {
-            const items = document.querySelectorAll('.gallery-item');
-            items.forEach(item => {
-                if (category === 'all' || item.dataset.category === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-
-        function closeGallery() {
-            const gallery = document.getElementById('gallery');
-            gallery.classList.remove('show');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
